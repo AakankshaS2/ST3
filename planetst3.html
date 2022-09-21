@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./planett.css">
+
+    <script>
+         function func(a){
+
+            let weight = document.getElementById("input_box").value;
+
+            if(a=='sun'){
+                 weight = weight*27.01;
+            } 
+
+            else if(a=='mercury'){
+                weight = weight*0.38;
+            }
+
+            else if(a=='venus'){
+                weight = weight*0.91;
+            }
+
+            else if(a=='earth'){
+                weight = weight*1.0;
+
+            }
+
+            else if(a=='mars'){
+                weight = weight*0.38;  
+            }
+
+            else if(a=='jupiter'){
+                weight = weight*2;
+                
+            }
+
+            else if(a=='saturn'){
+                weight = weight*1.06;
+            }
+
+            else if(a=='uranus'){
+                weight = weight*0.92;
+            }
+            
+            else if(a=='neptune'){
+                weight = weight*1.19;
+            }
+
+            else if(a=='pluto'){
+                weight = weight*0.06;
+            }
+
+            document.getElementById('output').innerHTML = "Weight on " + a + " is " + weight;
+            // alert("Weight on " + a + " is " + weight);
+        }
+       
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="my_content">
+                <div style="color: white; ">
+                    <h1  style="font-size:xx-large ;">ENTER THE WEIGHT ON EARTH</h1>
+                </div>
+    
+                <div class="input_box">
+                    <input type="number" id="input_box">
+                </div>
+    
+                <div style="color: white;">
+                    <h2 id="output"></h2>
+                </div>
+            </div>
+
+            <div id="parent">
+                 
+
+
+
+
+`               <div class="inner">
+    
+
+
+                    <div class="mercury">
+                        <h1 style="color:rgb(60, 175, 179);">MERCURY</h1>
+                        <img id="mercury" src="./mercury.png" onclick="func('mercury')" >
+                    </div>
+
+                    <div class="venus">
+                        <h1 style="color:rgb(60, 175, 179);">VENUS </h1>
+                        <img id="venus" src="./venus.png" onclick="func('venus')" > 
+                    </div>
+
+                    <div class="earth">
+                        <h1 style="color:rgb(60, 175, 179);">EARTH</h1>
+                        <img id="earth" src="./earth.png" onclick="func('earth')" >
+                    </div>
+
+                    <div class="mars">
+                        <h1 style="color:rgb(60, 175, 179);">MARS</h1>
+                        <img id="mars" src="./marss.png" onclick="func('mars')" >
+                    </div>
+
+                </div>
+                
+                <div class="inner">
+                    
+
+                <div class="jupiter">
+                    <h1 style="color:rgb(60, 175, 179);">JUPITER</h1>
+                    <img id="jupiter" src="./jupiter.png" onclick="func('jupiter')" >
+                </div>
+
+                <div class="saturn">
+                    <h1 style="color:rgb(60, 175, 179);">SATURN</h1>
+                    <img id="saturn" src="./saturn.jpg" onclick="func('saturn')" >
+                </div>
+
+                <div class="uranus">
+                    <h1 style="color:rgb(60, 175, 179);">URANUS</h1>
+                    <img id="uranus" src="./uranus.png" onclick="func('uranus')" >
+
+                </div>
+                <div class="neptune">
+                    <h1 style="color:rgb(60, 175, 179);">NEPTUNE</h1>
+                    <img id="neptune" src="./neptune.png" onclick="func('neptune')" >
+                </div>
+
+                
+            </div>
+
+            </div>  
+
+                    
+        </div>
+    </div>
+</body>
+</html>
